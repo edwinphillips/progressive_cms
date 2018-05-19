@@ -417,8 +417,7 @@ function progressive_cms_form_alter(&$form, &$form_state, $form_id) {
       }
       break;
     case 'user_login':
-      $form['#prefix'] = '<h3 class="title">' . t('Sign In');
-      $form['#prefix'] .= ' <small>' . t('or') . ' ' . l(t('Sign Up'), 'user/register', array('attributes' => array('class' => array('sign-up')))) . '</small></h3>';
+      $form['#prefix'] = '<h3 class="title">' . t('Sign In') . '</h3>';
       $form['#prefix'] .= '<p>' . t('If you have an account with us, please log in.') . '</p>';
       $form['actions']['#attributes']['class'] = array('buttons-box clearfix');
       $form['actions']['submit']['#suffix'] = l(t('Forgot Your Password?'), 'user/password', array('attributes' => array('class' => array('forgot'))));
